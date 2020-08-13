@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+    font-family: 'Open Sans', sans-serif
+}
+
+.avatar {
+    border-radius: 50%;
+    float        : left;
+    margin-right : 2.5em
+}
+
+body {
+    padding: 0;
+    margin : 0
+}
+
+header {
+    height    : 50px;
+    background: #000;
+    color     : #fff;
+    padding   : .5rem 0 1rem
+}
+
+header .logo {
+    line-height : 50px;
+    font-weight : 700;
+    padding-left: 20px
+}
+
+nav {
+    float: right
+}
+
+nav ul {
+    margin    : 0;
+    padding   : 0;
+    list-style: none
+}
+
+nav ul li {
+    display: inline
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+    display        : inline-block;
+    padding        : .5rem;
+    color          : #fff;
+    line-height    : 50px;
+    text-decoration: none
+}
+
+nav ul li a:hover {
+    background: #444
+}
+
+main {
+    margin   : 0 auto;
+    width    : 960px;
+    max-width: 90%
+}
+
+#toggleMenu {
+    display: none
+}
+
+@media only screen and (max-width:960px) {
+    header {
+        position: relative
+    }
+
+    #toggleMenu {
+        display    : block;
+        float      : right;
+        line-height: 50px
+    }
+
+    nav {
+        position  : absolute;
+        display   : none;
+        background: #000;
+        top       : 50px;
+        left      : 0;
+        right     : 0
+    }
+
+    nav ul li a,
+    nav ul li a:link,
+    nav ul li a:visited {
+        display      : block;
+        border-bottom: 1px solid #777
+    }
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    padding    : 0;
+    margin     : 0
+}
+
+h1 {
+    text-align     : center;
+    text-decoration: underline
+}
+
+h2 {
+    align-content  : center;
+    text-align     : center;
+    justify-content: center
+}
+
+h3 {
+    text-align: center
+}
+
+h4 {
+    text-align: center;
+    padding   : 0
+}
+
+h6 {
+    text-align    : center;
+    padding-bottom: 0
+}
+
+.title {
+    text-align: center
+}
+
+p .talent {
+    text-align: justify
+}
+
+.links {
+    justify-content: center
+}
+
+.container {
+    display       : flex;
+    flex-direction: row;
+    margin-left   : 200px
+}
+
+.row {
+    padding-left: 30px
+}
+
+.info {
+    padding-left: 30px
+}
+
+p .fend {
+    justify-content: space-evenly
+}
+
+.contributions {
+    text-align: center
+}
+
+.container-3 {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center
+}
+
+.item {
+    justify-content: left
+}
+
+.boxe1 {
+    display        : flex;
+    justify-content: space-between
+}
+
+.boxe2 {
+    display        : flex;
+    justify-content: space-between
+}
+
+.boxe3 {
+    display        : flex;
+    justify-content: space-between
+}
+
+.containerbox {
+    box-sizing      : border-box;
+    background-color: #add8e6;
+    height          : 100vh;
+    width           : 70vw;
+    justify-content : center
+}
+
+#name {
+    margin-left  : 300px;
+    display      : flex;
+    margin-bottom: 40px;
+    font-size    : 20px;
+    width        : 400px;
+    padding      : 10px;
+    border-radius: 10px
+}
+
+#email {
+    margin-left  : 300px;
+    display      : flex;
+    margin-bottom: 40px;
+    font-size    : 20px;
+    width        : 400px;
+    padding      : 10px;
+    border-radius: 10px
+}
+
+#message {
+    margin-left  : 300px;
+    display      : flex;
+    margin-bottom: 40px;
+    font-size    : 20px;
+    width        : 400px;
+    padding      : 10px;
+    border-radius: 10px
+}
+
+label {
+    font-size  : 18px;
+    font-weight: 700;
+    margin-left: 300px
+}
+
+input[type=submit] {
+    margin-left: 300px;
+    font-size  : 25px
+}
+
+.intro {
+    font-size: 25px
+}
