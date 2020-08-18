@@ -148,4 +148,23 @@ td.date {
   width: 100em;
   text-align: right; }
 
+  #name {
+    padding-bottom: 10px;
+    }
+    
+    #email {
+      padding-bottom: 10px;
+    }
+    
+    #message {
+      padding-bottom: 10px;
+    }
+    
+
+
+
+
+
+
+
 /*# sourceMappingURL=main.css.map */
