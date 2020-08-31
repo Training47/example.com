@@ -35,7 +35,7 @@
   <div class="media-body">
     <h5 class="mt-0">Top-aligned media</h5>
     <div id = "description">
-      <h2 class="title" alt="title"><strong>Full Stack Web and Hybrid Mobile Application Developer</strong></h2>
+      <h2 class="title text-center" alt="title"><strong>Full Stack Web and Hybrid Mobile Application Developer</strong></h2>
       <p class="talent" alt="talent">Full Stack web and hybrid applications developer specializing in designing user
       interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.  
       Utilizing JavaScript application and architecture. Experienced in all stages of development life cycle and well versed in many programming languages.
@@ -50,7 +50,7 @@
   <h4 class="comptitle text-center"><strong>COMPETENCIES</strong></h4>
   <div class="container1">
      <div class="row">
-      <div class="col"><ul><li>Full Stack Development</li></ul></div>
+      <div class="col align-right"><ul><li>Full Stack Development</li></ul></div>
       <div class="col"><ul><li>Strong Leadership Skills</li></ul></div>
       </div>
 
@@ -107,7 +107,7 @@
 
 <!--Professional Experience--->
 <section class="experience" alt="experience">
-<div class="container3">
+<div class="container3 pull-right">
 <h4 class="pro text-center"><strong>PROFESSIONAL EXPERIENCE</strong></h4>
 <div>
 <ul class="list-group list-group-horizontal-lg">
@@ -190,7 +190,7 @@ and advance forward in career path. Seven projects were completed as proven reco
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-<script> var toggleMenu = document.getElementById('toggleMenu');
+<!-- <script> var toggleMenu = document.getElementById('toggleMenu');
   var nav = document.querySelector('nav');
   toggleMenu.addEventListener(
     'click',
@@ -201,6 +201,6 @@ and advance forward in career path. Seven projects were completed as proven reco
         nav.style.display='block';
       }
     }
-  );   </script>
+  );   </script> -->
 </body>
 </html>
