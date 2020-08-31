@@ -1,7 +1,7 @@
 <?php
 require '../../core/functions.php';
-require '../../config/keys.php';
 require '../../core/db_connect.php';
+require '../../core/bootstrap.php';
 
 //Get the post
 $get = filter_input_array(INPUT_GET);
@@ -47,18 +47,22 @@ if(!empty($input)){
     //Sanitiezed insert
     $sql = 'UPDATE posts 
     SET 
-     title=title, slug=slug, body=body, meta_description=meta_description, meta_keywords=meta_keywords
+     title=title, 
+     slug=slug, 
+     body=body, 
+     meta_description=meta_description, 
+     meta_keywords=meta_keywords
      WHERE id=:id';
 
     if($pdo->prepare($sql)->execute([
-        $input['title'],
-        $slug,
-        $input['body'],
-        $input['meta_description'],
-        $input['meta_keywords'],
-        $input['id']
+        'title'=>$input['title'],
+        'slug'=>$slug,
+        'body'=>$input['body'],
+        'meta_description'=>$input['meta_description'],
+        'meta_keywords'=>$input['meta_keywords'],
+        'id'=>$input['id']
     ])){
-       header('LOCATION:view.php?slug='. $row['slug']);
+       header('LOCATION:/posts/view.php?slug='. $row['slug']);
     }else{
         $message = 'Something bad happened';
     }
@@ -78,7 +82,8 @@ $content = <<<EOT
 <div class="form-group">
     <label for="body">Body</label>
     <textarea id="body" name="body" rows="8" class="form-control">
-    {$row['body']}</textarea>
+    {$row['body']}
+    </textarea>
 </div>
 
 <div class="row">

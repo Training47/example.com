@@ -1,9 +1,10 @@
 <?php
 require '../../core/functions.php';
-require '../../config/keys.php';
+//require '../../core/session.php;
 require '../../core/db_connect.php';
-
-//Get the post
+require '../../core/bootstrap.php';
+//checkSession();
+//Get the user
 $get = filter_input_array(INPUT_GET);
 $id = $get['id'];
 
@@ -28,7 +29,8 @@ $args = [
     'id'=>FILTER_SANITIZE_STRING, //strips HMTL
     'first_name'=>FILTER_SANITIZE_STRING, //strips HMTL
     'last_name'=>FILTER_SANITIZE_STRING, //strips HMTL
-    'email'=>FILTER_UNSAFE_RAW  //NULL FILTER
+    'email'=>FILTER_SANITIZE_STRING,
+    'password'=>FILTER_UNSAFE_RAW  //NULL FILTER
 ];
 
 $input = filter_input_array(INPUT_POST, $args);
@@ -37,6 +39,15 @@ if(!empty($input)){
 
     //Strip white space, begining and end
     $input = array_map('trim', $input);
+    $hashSQL=false;
+    if(!empty($input['password'])){
+      $hash = password_hash(
+        $input['password'],
+        PASSWORD_BCRYPT,
+        ['cost'=>14]
+      );
+      $hashSQL=",password='{$hash}'";
+    }
 
     //Sanitiezed insert
     $sql = 'UPDATE users 
@@ -44,6 +55,7 @@ if(!empty($input)){
     first_name=:first_name, 
     last_name=:last_name, 
     email=:email, 
+    {$hashSQL}
     WHERE
     id=:id';
 
@@ -53,7 +65,7 @@ if(!empty($input)){
         'email'=>$input['email'],
         'id'=>$input['id']
     ])){
-       header('LOCATION:/view.php?id=' . $row['id']);
+       header('LOCATION:/users/view2.php?id=' . $row['id']);
     }else{
         $message = 'Something bad happened';
     }
@@ -78,7 +90,6 @@ $content = <<<EOT
         <label for="email">Email</label>
         <input id="email" value="{$row['email']}"name="email" type="text" class="form-control">
     </div>
-
 
 <div class="form-group">
     <input type="submit" value="Submit" class="btn btn-primary">

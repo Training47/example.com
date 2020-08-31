@@ -1,7 +1,9 @@
-<?php
+<!-- <?php
 require '../core/About/src/Validation/Validate.php';
 include '../vendor/autoload.php';
 require '../config/keys.php';
+
+
 use Mailgun\Mailgun;
 use About\Validation;
 
@@ -59,4 +61,4 @@ var_dump($result);
     }else{
         $message = "<div class=\"message-error\">Your form has errors!</div>";
     }
-}
+} 

@@ -1,7 +1,7 @@
 <?php
-require '../../config/keys.php';
 require '../../core/db_connect.php';
-
+require '../../core/bootstrap.php';
+//checkSession();
 $args = [
     'id'=>FILTER_UNSAFE_RAW,
     'confirm'=>FILTER_VALIDATE_INT  //NULL FILTER
@@ -30,7 +30,7 @@ $content=<<<EOT
 
 <div class="text-center">
 <a href="./" class="btn btn-success btn-lg">Cancel</a>
-<br></br>
+<br><br>
 <a href="delete.php?id={$row['id']}&confirm=1" class="btn btn-link text-danger">Delete</a>
 
 EOT;

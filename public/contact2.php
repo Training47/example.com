@@ -41,7 +41,7 @@ var_dump($errors);
     <meta charset="UTF-8">
     <title>Contact Me - Lisa Pena</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/css/main.min.css" type="text/css">
+    <link rel="stylesheet" href="../public/dist/css/main.min.css" type="text/css">
   </head>
   <body>
     <header>
@@ -58,7 +58,7 @@ var_dump($errors);
     <main>
 
       <h1>Contact Me - Lisa Pena</h1>
-      <form action="contact1.php" method="POST">
+      <form action="contact2.php" method="POST">
         
         <input type="hidden" name="subject" value="New submission!">
         

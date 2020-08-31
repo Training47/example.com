@@ -1,12 +1,15 @@
 <?php
-include '../../core/db_connect.php';
+require '../../core/db_connect.php';
+require '../../core/bootstrap.php';
+
 
 $input = filter_input_array(INPUT_GET);
+
 $slug = preg_replace("/[^a-z0-9-]+/", "", $input['slug']);
 
 
 $stmt = $pdo->prepare('SELECT * FROM posts WHERE slug = ?');
-$stmt->execute([$slug]);
+$stmt->execute(['slug'=>$slug]);
 $row = $stmt->fetch();
 
 $meta=[];
@@ -16,10 +19,8 @@ $meta['keywords']=$row['meta_keywords'];
 
 $content=<<<EOT
 <h1>{$row['title']}</h1>
-{$row['body']}<br>
-{$row['meta_description']}<br>
-{$row['meta_keywords']}<br>
-{$row['created']}
+{$row['body']}
+
 
 <hr>
 <div>

@@ -1,15 +1,15 @@
 <?php
 require '../../core/functions.php';
-require '../../config/keys.php';
 require '../../core/db_connect.php';
-
+require '../../core/bootstrap.php';
+//checkSession();
 $message=null;
 
 $args = [
-    'title'=>FILTER_SANITIZE_STRING, //strips HMTL
-    'meta_description'=>FILTER_SANITIZE_STRING, //strips HMTL
-    'meta_keywords'=>FILTER_SANITIZE_STRING, //strips HMTL
-    'body'=>FILTER_UNSAFE_RAW  //NULL FILTER
+    'first_name'=>FILTER_SANITIZE_STRING, //strips HMTL
+    'last_name'=>FILTER_SANITIZE_STRING, //strips HMTL
+    'email'=>FILTER_SANITIZE_EMAIL
+    
 ];
 
 $input = filter_input_array(INPUT_POST, $args);
@@ -19,7 +19,7 @@ if(!empty($input)){
     //Strip white space, begining and end
     $input = array_map('trim', $input);
 
-    // //Allow only whitelisted HTML
+    //Allow only whitelisted HTML
     // $input['body'] = cleanHTML($input['body']);
 
     // //Create the slug
@@ -34,8 +34,12 @@ if(!empty($input)){
         $input['first_name'],
         $input['last_name'],
         $input['email']
+        
     ])){
-       header('LOCATION:./view.php?email=' . $input['email']);
+
+        header('LOCATION:./view2.php?email=' . $input['email']);
+
+
     }else{
         $message = 'Something bad happened';
     }
@@ -48,12 +52,12 @@ $content = <<<EOT
 
 <div class="form-group">
     <label for="first_name">First Name</label>
-    <input id="first_name" name="first name" type="text" class="form-control">
+    <input id="first_name" name="first_name" type="text" class="form-control">
 </div>
 
 <div class="form-group">
     <label for="last_name">Last Name</label>
-    <input id="last_name" name="last name" type="text" class="form-control">
+    <input id="last_name" name="last_name" type="text" class="form-control">
 </div>
 
 <div class="form-group">

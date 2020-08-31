@@ -1,0 +1,72 @@
+/*Resume HTML*/
+body {
+    margin: 0;
+  }
+  
+  h4 {
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+  }
+   
+  .media {
+    margin: 0;
+    justify-content: center;
+  }
+  
+  #title {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  /*competencies*/
+ 
+.container1 {
+position: relative;
+margin-left: 25%;
+}
+ 
+.row {
+  position: relative;
+  width: 550px; 
+}
+
+.col {
+  height: 20px;
+  width: 5px;
+}
+
+  /*Certifications*/
+
+  .certifications {
+  position: relative;
+  margin-left: 15%;
+  padding: 20px;
+}
+
+.info {
+  padding-left: 15px;
+}
+
+/*Experience/Tech Bkgrd*/
+
+
+
+ /*Contributions*/
+.container4 {
+  position: relative;
+  margin-left: 25%;
+  padding-bottom: 10px;
+ 
+}
+
+.item {
+  padding: 5px;
+}
+
+  /*Education*/
+  table {
+    margin-top: 10px;
+  }

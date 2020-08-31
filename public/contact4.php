@@ -51,7 +51,7 @@ if(!empty($input)){
 if(empty($valid->errors) && !empty($input)){
     $message = "<div>Success!</div>";
 }else{
-    $message = "<div>Error!</div>";
+    // $message = "<div>Error!</div>";
 }
 
 ?>
@@ -61,7 +61,7 @@ if(empty($valid->errors) && !empty($input)){
     <meta charset="UTF-8">
     <title>Contact Me - YOUR-NAME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/css/main.min.css" type="text/css">
+    <link rel="stylesheet" href="../public/dist/css/main.min.css" type="text/css">
   </head>
   <body>
   
@@ -78,7 +78,7 @@ if(empty($valid->errors) && !empty($input)){
     </header>
     
     <main>
-      <h1>Contact Me - YOUR-NAME</h1>
+      <h1>Contact Me - Lisa Pena</h1>
 
       <?php echo (!empty($message)?$message:null); ?>
 

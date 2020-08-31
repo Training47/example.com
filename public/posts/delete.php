@@ -1,6 +1,6 @@
 <?php
-require '../../config/keys.php';
 require '../../core/db_connect.php';
+require '../../core/bootstrap.php';
 
 $args = [
     'id'=>FILTER_UNSAFE_RAW,

@@ -1,11 +1,13 @@
 <?php
-require '../../config/keys.php';
+
 require '../../core/db_connect.php';
+require '../../core/bootstrap.php';
+//checkSession();
 
 $input = filter_input_array(INPUT_GET);
 
 $id = !(empty($input['id']))?$input['id']:null;
-$email = !(empty($input['email']))?input['email']:null;
+$email = !(empty($input['email']))?$input['email']:null;
 
 if(!empty($email)){
     $lookup = $email;
@@ -28,8 +30,8 @@ $content=<<<EOT
 
 <hr>
 <div>
-<a class="btn btn-link" href="edit.php?id={$row['id']}">Edit</a>
-<a class="btn btn-link text-danger" href="delete.php?id={$row['id']}">Delete</a>
+<a class="btn btn-link" href="edit2.php?id={$row['id']}">Edit</a>
+<a class="btn btn-link text-danger" href="delete2.php?id={$row['id']}">Delete</a>
 </div>
 EOT;
 
