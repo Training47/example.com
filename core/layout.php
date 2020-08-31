@@ -76,7 +76,7 @@ function active($name){
                     <a class="nav-link" href="../logout.php">Logout</a>
                     
                   <?php else: ?>
-                    <a class="nav-link <?php echo active('login.php'); ?>"href="../login.php">Login</a>
+                    <a class="nav-link <?php echo active('login.php'); ?>" href="../login.php">Login</a>
                   <?php endif; ?>
                 </li>
                <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->

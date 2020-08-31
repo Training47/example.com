@@ -18,7 +18,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+    <div class="navbar-nav navbar-dark bg-dark text-white">
       <a class="nav-link active" href="index.php">Home<span class="sr-only">(current)</span></a>
       <a class="nav-link" href="resume.php">Resume</a>
       <a class="nav-link" href="contact5.php">Contact</a>
