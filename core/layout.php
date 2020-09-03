@@ -48,15 +48,15 @@ function active($name){
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                  <li class="nav-item">
-                  <a class="nav-link <?php echo active('/'); ?>" href="index.php">Home</a>
+                  <a class="nav-link <?php echo active('/'); ?>" href="./index.php">Home</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link <?php echo active('/'); ?>" href="resume.php">Resume</a>
+                  <a class="nav-link <?php echo active('/resume.php'); ?>" href="resume.php">Resume</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link <?php echo active('contact5.php'); ?>" href="./contact5.php">Contact</a>
+                  <a class="nav-link <?php echo active('/contact5.php'); ?>" href="contact5.php">Contact</a>
                 </li>
 
                 <li class="nav-item">
@@ -68,7 +68,7 @@ function active($name){
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link <?php echo active('register.php'); ?>" href="register.php">Register</a>
+                  <a class="nav-link <?php echo active('/register.php'); ?>" href="register.php">Register</a>
                 </li>
 
                 <li class="nav-item">
@@ -76,10 +76,9 @@ function active($name){
                     <a class="nav-link" href="./logout.php">Logout</a>
                     
                   <?php else: ?>
-                    <a class="nav-link <?php echo active('login.php'); ?>" href="./login.php">Login</a>
+                    <a class="nav-link <?php echo active('login.php'); ?>" href="../../login.php">Login</a>
                   <?php endif; ?>
                 </li>
-               <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
               </div>
             </div>
       </nav>    
