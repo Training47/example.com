@@ -56,7 +56,7 @@ function active($name){
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link <?php echo active('/contact5.php'); ?>" href="contact5.php">Contact</a>
+                  <a class="nav-link <?php echo active('/contact5.php'); ?>" href="./contact5.php">Contact</a>
                 </li>
 
                 <li class="nav-item">
@@ -76,7 +76,7 @@ function active($name){
                     <a class="nav-link" href="./logout.php">Logout</a>
                     
                   <?php else: ?>
-                    <a class="nav-link <?php echo active('login.php'); ?>" href="../../login.php">Login</a>
+                    <a class="nav-link <?php echo active('login.php'); ?>" href="../login.php">Login</a>
                   <?php endif; ?>
                 </li>
               </div>
